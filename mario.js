@@ -9,8 +9,8 @@ drawPyramid(5);
  */
 function drawPyramid(height) {
     var pyramid = document.getElementById("pyramid");
-    var child = document.getElementById("construction");
-    pyramid.removeChild(child);
+    document.getElementById("construction").remove();
+    
     // TODO 2
     // delete the "under construction" element, ie the <div id="notice">
 
