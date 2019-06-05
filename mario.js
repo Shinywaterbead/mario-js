@@ -8,7 +8,9 @@ drawPyramid(5);
  * Renders, in the HTML document, a Mario pyramid of the specified height
  */
 function drawPyramid(height) {
-
+    var pyramid = document.getElementById("pyramid");
+    var child = document.getElementById("construction");
+    pyramid.removeChild(child);
     // TODO 2
     // delete the "under construction" element, ie the <div id="notice">
 
@@ -30,8 +32,14 @@ function drawPyramid(height) {
         }
 
         // you can delete this now
-        console.log(rowStr)
 
+
+        console.log(rowStr)
+        var para = document.createElement("p");
+        var node = document.createTextNode(rowStr);
+        para.appendChild(node);
+        pyramid.appendChild(para);
+        
         // TODO 1
         // create an element whose inner text is rowStr,
         // and insert it as a child of the container <div id="pyramid">
